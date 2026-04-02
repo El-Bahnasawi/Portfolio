@@ -419,19 +419,42 @@
                     <div>
                         <h3 class="text-2xl font-bold mb-6 text-center">Languages</h3>
                         <div class="space-y-4">
-                            <div class="bg-neutral-900 rounded-2xl p-5 border border-neutral-800 card-hover flex items-center gap-4" data-animate>
-                                <div class="text-3xl">🇪🇬</div>
-                                <div><div class="text-xl font-bold">Arabic</div><div class="text-sm text-accent-blue">Native</div></div>
-                            </div>
-                            <div class="bg-neutral-900 rounded-2xl p-5 border border-neutral-800 card-hover flex items-center gap-4" data-animate>
-                                <div class="text-3xl">🇺🇸</div>
-                                <div><div class="text-xl font-bold">English</div><div class="text-sm text-accent-blue">Fluent (Professional)</div></div>
-                            </div>
-                            <div class="bg-neutral-900 rounded-2xl p-5 border border-neutral-800 card-hover flex items-center gap-4" data-animate>
-                                <div class="text-3xl">🇨🇳</div>
-                                <div><div class="text-xl font-bold">Mandarin</div><div class="text-sm text-accent-blue">Beginner (actively learning)</div></div>
-                            </div>
-                        </div>
+                <!-- Arabic -->
+                <div class="bg-neutral-900 rounded-2xl p-5 border border-neutral-800 card-hover flex items-center gap-4" data-animate>
+                    <img src="https://flagcdn.com/w40/eg.png"
+                        srcset="https://flagcdn.com/w80/eg.png 2x"
+                        alt="Egypt"
+                        class="w-10 h-auto rounded shadow-sm">
+                    <div>
+                        <div class="text-xl font-bold">Arabic</div>
+                        <div class="text-sm text-accent-blue">Native</div>
+                    </div>
+                </div>
+
+                <!-- English -->
+                <div class="bg-neutral-900 rounded-2xl p-5 border border-neutral-800 card-hover flex items-center gap-4" data-animate>
+                    <img src="https://flagcdn.com/w40/us.png"
+                        srcset="https://flagcdn.com/w80/us.png 2x"
+                        alt="United States"
+                        class="w-10 h-auto rounded shadow-sm">
+                    <div>
+                        <div class="text-xl font-bold">English</div>
+                        <div class="text-sm text-accent-blue">Fluent (Professional)</div>
+                    </div>
+                </div>
+
+                <!-- Mandarin -->
+                <div class="bg-neutral-900 rounded-2xl p-5 border border-neutral-800 card-hover flex items-center gap-4" data-animate>
+                    <img src="https://flagcdn.com/w40/cn.png"
+                        srcset="https://flagcdn.com/w80/cn.png 2x"
+                        alt="China"
+                        class="w-10 h-auto rounded shadow-sm">
+                    <div>
+                        <div class="text-xl font-bold">Mandarin</div>
+                        <div class="text-sm text-accent-blue">Beginner (actively learning)</div>
+                    </div>
+                </div>
+            </div>
                     </div>
                     <div>
                         <h3 class="text-2xl font-bold mb-6 text-center">Certifications</h3>
@@ -615,7 +638,7 @@
                 badges: ["🎓 Graduation Project", "📄 Preprint"],
                 description: "Built a browser extension that blurs hateful English text on Twitter and YouTube in real time. The system uses a three‑layer pipeline: a fast rule‑based filter catches obvious cases, then a LoRA‑tuned BERTweet model (trained on 530k+ tweets) handles the rest with 84.5% macro‑F1. All feedback is stored in Supabase to continuously improve the model. The research from this project led to an arXiv preprint.",
                 tech: ["BERTweet", "LoRA", "FastAPI", "Supabase", "W&B", "Streamlit"],
-                metrics: ["84.5% Macro‑F1", "Sub‑second inference", "1.87M params"],
+                metrics: ["84.5% Macro‑F1", "Sub‑second inference"],
                 github: "https://github.com/El-Bahnasawi/AI-Powered-Textual-Hate-Content-Moderation",
                 demo: "https://hate-speech-app-app-gfccasxcf7zheojjqskpqw.streamlit.app/"
             },
@@ -625,7 +648,7 @@
                 badges: ["🏛️ University Internship"],
                 description: "A modular graph‑based extractive summarization system combining SBERT embeddings with PageRank. Achieved ROUGE L2‑Norm ≈ 0.41 on CNN/DailyMail. Includes entity‑aware graph construction, ablation studies, and an interactive Streamlit app for real‑time summarization with graph visualization.",
                 tech: ["SBERT", "PageRank", "NetworkX", "Streamlit", "Python"],
-                metrics: ["ROUGE ≈ 0.41", "~0.04s/article", "Ablation study"],
+                metrics: ["ROUGE ≈ 0.41", "~0.04s/article"],
                 github: "https://github.com/El-Bahnasawi/Graph-Based-Text-Summarization",
                 demo: "https://graph-based-text-summarization.streamlit.app/"
             },
@@ -634,7 +657,7 @@
                 date: "Feb 2024",
                 description: "Interactive Plotly Dash dashboard analyzing 3 years of Walmart sales across 45 stores and 98 departments. Features: K‑Means & GMM clustering on store/department features, sales breakdown by store type (Supercenter, Discount Store, Neighborhood Market), time series analysis, economic correlations (CPI, fuel prices), and Dockerized deployment on Render. Includes deep insights on holiday effects and store performance tiers.",
                 tech: ["Plotly Dash", "Docker", "scikit-learn", "Render", "Python"],
-                metrics: ["4 store tiers", "3 dept. tiers", "Live deployment"],
+                metrics: [],
                 github: "https://github.com/El-Bahnasawi/Walmart-Dataset-Analysis",
                 demo: "https://walmart-dataset-analysis.onrender.com/"
             },
@@ -643,7 +666,7 @@
                 date: "Mar 2024",
                 description: "Comprehensive analysis of 30 years of US crime data. Uncovered trends like larceny‑theft dominance and Alaska's high violent crime rate. Built a recidivism predictor with 98–100% accuracy using XGBoost after feature selection (RFE, VIF). Compared dimensionality reduction (PCA, UMAP) vs. feature selection pipelines. Included statistical tests (t‑test) on firearm laws' effect on crime rates.",
                 tech: ["XGBoost", "Plotly", "Pandas", "scikit-learn", "UMAP"],
-                metrics: ["98–100% accuracy", "RFE feature selection", "t-test p=0.383"],
+                metrics: ["98–100% accuracy", "t-test p=0.383"],
                 github: "https://github.com/El-Bahnasawi/Analyzing-U.S.-Crime-Data",
                 demo: null
             }
